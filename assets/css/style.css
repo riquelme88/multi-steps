@@ -1,0 +1,1060 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: hsl(217, 100%, 97%);
+}
+
+main{
+    display: flex;
+    box-shadow: 0px 0px 10px #ddd;
+    width: 70vw;
+    margin: auto;
+    margin-top: 12vh;
+    height: 600px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.steps{
+    border-radius: 15px;
+    width: 30%;
+    background: url(/assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-position: bottom;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.step{
+    display: flex;
+    margin-top: 20px;
+}
+
+.number{
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.active{
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+}
+.step-info{
+    margin-left: 13px;
+    text-transform: uppercase;
+}
+
+.step-info p{
+    font-size: 13px;
+    color: hsl(231, 11%, 63%);
+}
+
+.step-info h2{
+    font-size: 19px;
+    margin-top: 5px;
+    color: white;
+}
+
+.right-steps{
+    position: relative;
+    width: 70%;
+    padding-left: 12%;
+    padding-top: 50px;
+}
+
+.test{
+    position: absolute;
+    margin-top: -150px;
+    margin-left: 50px;
+}
+
+
+/* First step */
+#step-1{
+    width: 80%;
+    display: none;
+    flex-direction: column;
+}
+.tittle{
+    font-size: 48px;
+    color: hsl(213, 96%, 18%);
+}
+
+.subtittle{
+    margin-top: 7px;
+    font-size: 20px;
+    color: hsl(231, 11%, 63%);
+}
+form{
+    margin-top: 30px;
+}
+
+label p{
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+form input{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 0px;
+    outline: 0;
+    border: 1px solid hsl(229, 24%, 87%) ;
+}
+
+input:focus{
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.next-stape{
+    margin-top: 25px;
+    margin-left: 75%;
+    padding: 10px;
+    width: 120px;
+    height: 45px;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 8px;
+    border: 0px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.next-stape:hover{
+    opacity: 0.9;
+}
+
+#step-1 .error{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 430px;
+    color: hsl(354, 84%, 57%);
+    font-weight: 700;
+}
+
+/*first step*/
+
+
+
+/* Second step*/
+
+#step-2{
+    display:none;
+    width: 80%;
+}
+
+.cards{
+    display: flex;
+    margin-top: 35px;
+    justify-content: space-around;
+    width: 630px;
+}
+
+.cards .card{
+    position: relative;
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 15px 15px;
+    width: 180px;
+    margin-left: 20px;
+    height: 180px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    cursor: pointer;
+}
+
+.selected{
+    border: 2px solid hsl(243, 100%, 62%) !important;
+    background-color: hsl(217, 100%, 97%);
+
+}
+
+.card:hover{
+    border: 1px solid hsl(243, 100%, 62%);
+    
+}
+
+.cards img{
+    width: 30%;
+}
+
+.cards .infos{
+    all: initial;
+    margin-top: 60px;
+}
+
+.active-year{
+    height: 195px !important;
+}
+
+.infos .name-card{
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.price-card{
+    margin-top: 3px;
+    color: hsl(231, 11%, 63%);
+}
+
+.months{
+    margin-top: 3px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+    display: none;
+}
+
+.option-plan{
+    display: flex;
+    background-color: hsl(217, 100%, 97%);
+    width: 82%;
+    margin-top: 30px;
+    justify-content: center;
+    height: 50px;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 60px;
+}
+
+#monthly{
+    margin-right: 20px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+#yearly{
+    margin-left: 20px;
+}
+
+.switch {
+    --circle-dim: 1em;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3em;
+    height: 1.4em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider-card {
+    position: absolute;
+    content: "";
+    height: var(--circle-dim);
+    width: var(--circle-dim);
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.25em;
+    transition: .4s;
+    pointer-events: none;
+  }
+
+  .slider-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  border-radius: 50%;
+  transition: .4s transform;
+}
+
+.slider-card-front {
+  background-color: white;
+}
+
+.slider-card-back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+input:checked ~ .slider-card {
+    transform: translateX(1.5em);
+}
+
+.go-back{
+    width: 100px;
+    border: 0px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 70px;
+    position: absolute;
+    background-color: hsl(217, 100%, 97%);
+    color: hsl(231, 11%, 63%);
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.go-back:hover{
+    color: hsl(213, 96%, 18%);
+}
+
+#step-2 .next-stape{
+    margin-top: 70px;
+    margin-left: 500px;
+}
+
+/*second step*/
+
+/*third step*/
+
+#step-3{
+    width: 80%;
+    display: block;
+    flex-direction: column;
+}
+
+#extraPlans{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.plan{
+    display: flex;
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 20px 15px;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.plan:hover{
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.plan input{
+    width: 15px;
+    height: 15px;
+}
+
+.info-plan{
+    margin-left: 30px;
+}
+
+.info-plan h4{
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 5px;
+}
+
+.info-plan p{
+    color: hsl(231, 11%, 63%);
+}
+
+.plan .price-plan{
+    margin-left: 500px;
+    position: absolute;
+}
+
+.price-plan p{
+    color: hsl(243, 100%, 62%);
+}
+
+#step-3 .go-back{
+    margin-top: 25px;
+}
+
+/*third step*/
+
+
+/* fourth step*/
+#step-4{
+    width: 80%;
+    display: none;
+    flex-direction: column;
+}
+
+
+
+
+.final-plan{
+    background-color: hsl(217, 100%, 97%);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 10px 20px;
+}
+
+.section-top{
+    display: flex;
+    border-bottom: 1px solid hsl(229, 24%, 87%);
+    padding: 5px;
+    padding-bottom: 25px;
+    justify-content: space-between;
+}
+
+.option h5{
+    color: hsl(213, 96%, 18%);
+    font-size: 18px;
+}
+
+.option p{
+    font-size: 14px;
+    color: hsl(231, 11%, 63%);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.option p:hover{
+    color: hsl(243, 100%, 62%);
+}
+
+.section-top .month{
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    align-self: center;
+}
+
+.section-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.section-bottom p{
+    margin-top: 15px;
+}
+
+.services p{
+    color: hsl(231, 11%, 63%);
+}
+
+.prices p{
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+.price{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.final-price{
+    color: hsl(231, 11%, 63%);
+}
+
+.price h4{
+    color: hsl(243, 100%, 62%);
+    font-size: 20px;
+}
+
+.confirm{
+    margin-left: 77%;
+    padding: 10px;
+    width: 120px;
+    height: 45px;
+    color: white;
+    background-color:hsl(243, 100%, 62%);
+    border-radius: 8px;
+    border: 0px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+#step-4 button{
+    margin-top: 120px;
+}
+
+/* fourth step*/
+
+
+
+/*conclusion*/
+
+#conclusion{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+}
+
+#conclusion img{
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+#conclusion h2{
+    margin-right: 50px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+#conclusion p{
+    margin-top: 20px;
+    max-width: 450px;
+    margin-right: 50px;
+    text-align: center;
+    color: hsl(231, 11%, 63%);
+
+}
+/*conclusion*/
+
+@media screen and (min-width : 1360px) and (max-width: 1440px) {
+    main{
+        margin-top: 7vh;
+        height: 500px;
+    }
+
+    .right-steps{
+        padding-top: 10px;
+    }
+
+    .tittle{
+        font-size: 38px;
+    }
+
+    .subtittle{
+        font-size: 15px;
+    }
+
+    form{
+        margin-top: 20px;
+    }
+    
+    form input{
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+
+    #step-1 .error{
+        position: absolute;
+        margin-top: -20px;
+        margin-left: 280px;
+        color: hsl(354, 84%, 57%);
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .cards{
+        width: 530px;
+        margin-left: -50px;
+    }
+
+    .cards .card{
+        margin-left: 15px;
+    }
+
+    .go-back{
+        margin-top: 50px;
+        margin-left: -20px;
+    }
+
+    #step-2 .next-stape{
+        margin-top: 45px;
+        margin-left: 350px;
+    }
+
+    #extraPlans{
+        margin-top: 15px;
+    }
+
+    .plan .price-plan{
+        margin-left: 320px; 
+    }
+
+    #step-4 button{
+        margin-top: 70px;
+    
+    }
+}
+
+@media screen and (min-width:900px) and (max-width: 1024px) {
+    main{
+        margin-top: 4vh;
+        height: 450px;
+        width: 80vw;
+    }
+
+    .number{
+        font-size: 17px;
+    }
+
+    .step-info p{
+        font-size: 12px;
+    }
+
+    .step-info h2{
+        font-size: 16px;
+    }
+
+    .right-steps{
+        padding-top: 10px;
+    }
+
+    .tittle{
+        font-size: 30px;
+    }
+
+    .subtittle{
+        font-size: 11px;
+    }
+
+    form{
+        margin-top: 15px;
+    }
+    
+    form input{
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    #step-1 .error{
+        position: absolute;
+        margin-top: -15px;
+        margin-left: 200px;
+        color: hsl(354, 84%, 57%);
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .next-stape{
+        margin-top: 25px;
+        margin-left: 70%;
+        width: 105px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .cards{
+        width: 480px;
+        margin-left: -50px;
+    }
+
+    .cards .card{
+        margin-left: 15px;
+    }
+
+    .go-back{
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+
+    #step-2 .next-stape{
+        margin-top: 20px;
+        margin-left: 300px;
+    }
+
+    #extraPlans{
+        margin-top: 15px;
+        height: 270px;
+    }
+
+    .plan{
+        height: 28%;
+    }
+
+    .info-plan h4{
+        font-size: 14px;
+    }
+
+    .info-plan p{
+        font-size: 13px;
+    }
+
+    .plan .price-plan{
+        margin-left: 280px;
+    }
+
+    .final-plan{
+        margin-top:20px;
+    }
+
+    .section-top{
+        padding-bottom: 15px;
+    }
+    
+    .option h5{
+        font-size: 15px;
+    }
+    
+    .option p{
+        font-size: 12px;
+    }
+
+    .section-bottom{
+        padding-bottom: 5px;
+    }
+    
+    .section-bottom p{
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    
+    .price{
+        margin-top: 10px;
+    }
+     
+    .price h4{
+        color: hsl(243, 100%, 62%);
+        font-size: 17px;
+    }
+    
+    .confirm{
+        margin-left: 72%;
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    #step-4 button{
+        margin-top: 65px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main{
+        all: initial;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }  
+
+    .steps{
+        all: initial;
+        width: 100vw;
+        background-image: url(/assets/images/bg-sidebar-mobile.svg);
+        background-size: cover;
+        display: flex;
+        height: 200px;
+        position: absolute;
+        z-index: 98;
+        justify-content: center;
+    }
+
+    .number{
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .step-info{
+        display: none;
+    }
+
+    .right-steps{
+        all: initial;
+        position: absolute;
+        z-index: 99;
+        background-color: white;
+        box-shadow: 0px 0px 10px #ccc;
+        border-radius: 10px;
+        margin-top: 85px;
+        margin-left: 60px;
+        width: 80vw;
+        height: 500px;
+        padding: 15px 20px;
+    }
+
+    #step-1{
+        all: initial;
+        position: relative;
+    }
+
+    .tittle{
+        font-size: 25px;
+    }
+
+    .subtittle{
+        font-size: 17px;
+    }
+
+    form{
+        margin-top: 35px;
+    }
+
+    form input{
+        margin-top: 20px;
+        margin-bottom: 25px;
+        width: 90%;
+        height: 55px;
+        border-radius: 7px;
+        font-size: 16px;
+    }
+
+    label p{
+        font-size: 14px;
+    }
+
+    .next-stape{
+        margin-top: 225px;
+        margin-left: 500px;
+    }
+
+    #step-1 .error{
+        margin-top: 0px;
+        margin-left: 420px;
+        font-size: 13px;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        width: 110%;
+    }
+    
+    .cards .card{
+        padding: 0px;
+        width: 100%;
+        margin-left: 0px;
+        height: 85px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        padding: 10px 10px;
+    }
+
+    .card img{
+        width: 40px;
+    }
+
+    .card .infos{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .active-year{
+        height: 95px !important;
+    }
+
+    .option-plan{
+        margin-top: 40px;
+    }
+
+    .go-back{
+        margin-top: 185px;
+        position: absolute;
+    }
+    
+    .go-back:hover{
+        color: hsl(213, 96%, 18%);
+    }
+    
+    #step-2 .next-stape{
+        margin-top: 185px;
+        margin-left: 500px;
+    }
+
+    .plan .price-plan{
+        margin-left: 400px;
+    }
+
+    #step-3 .go-back{
+        margin-top: 225px;
+    }
+ 
+    #step-4 button{
+        position: absolute;
+        margin-top: 305px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .right-steps{
+        margin-left: 20px;
+       
+    }
+
+    .next-stape{
+        margin-left: 220px;
+        margin-top: 200px;
+    }
+
+    #step-1 .error{
+        margin-top: 0px;
+        margin-left: 180px;
+        font-size: 12px;
+    }
+
+    form input{
+        font-size: 14px;
+    }
+
+    .go-back{
+        margin-top: 160px;
+        position: absolute;
+    }
+
+    #step-2 .next-stape{
+        margin-top: 160px;
+        margin-left: 210px;
+    }
+
+    .plan .price-plan{
+        margin-left: 250px;
+    }
+
+    .plan{
+        width: 125%;
+    }
+
+    .info-plan h4{
+        font-size: 15px;
+    }
+
+    .info-plan p{
+        font-size: 13px;
+    }
+
+    #step-3 .next-stape{
+        margin-top: 225px;
+    }
+
+    .final-plan{
+        width: 120%;
+    }
+
+    .price{
+        width: 110%;
+    }
+
+    #step-4 button{
+        margin-top: 265px;
+    }
+
+    .confirm{
+        margin-left: 220px;
+    }
+
+    #conclusion{
+        padding-left: 10%
+    }
+}
+
+@media screen and (max-width: 375px){
+    #step-1 .error{
+        margin-left: 140px;
+    }
+
+    .next-stape{
+        margin-left: 180px;
+    }
+
+    .go-back{
+        margin-top: 150px;
+        margin-left: -20px;
+    }
+
+    #step-2 .next-stape{
+        margin-top: 150px;
+        margin-left: 175px;
+    }
+
+    .plan .price-plan{
+        margin-left: 230px;
+        font-size: 12px;
+    }
+
+    .confirm{
+        margin-left: 180px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .right-steps{
+        margin-left: 10px;
+    }
+
+    #step-1 .error{
+        margin-left: 120px;
+        font-size: 11px;
+    }
+
+    .next-stape{
+        margin-left: 125px;
+        margin-top: 190px;
+    }
+
+    #step-2 .next-stape{
+        margin-left: 150px;
+    }
+
+    .option-plan{
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .plan .price-plan{
+        margin-left: 190px;
+    }
+
+    .plan{
+        width: 125%;
+    }
+
+    .info-plan h4{
+        font-size: 13px;
+    }
+
+    .info-plan p{
+        font-size: 11px;
+    }
+
+    #step-4 button{
+        position: absolute;
+        margin-top: 215px;
+    }
+
+    .confirm{
+        margin-left: 130px;
+    }
+    
+    #conclusion p{
+        font-size: 15px;
+    }
+
+    
+}
+
+
+
+  
